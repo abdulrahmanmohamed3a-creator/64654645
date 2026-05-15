@@ -1,0 +1,47 @@
+.emoji-frame {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+  background: var(--card-bg);
+  border-radius: 50%;
+  border: 8px solid var(--card-bg);
+  outline: 4px solid var(--secondary-color);
+  box-shadow: var(--shadow-lg);
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 90vw;
+  max-height: 90vw;
+}
+
+.floating-emoji {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.avatar-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.emoji-shadow {
+  position: absolute;
+  bottom: 10%;
+  width: 60%;
+  height: 10px;
+  background: rgba(0,0,0,0.1);
+  filter: blur(8px);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+[data-theme='dark'] .emoji-frame {
+  outline-color: var(--accent-color);
+}
